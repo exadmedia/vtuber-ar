@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VTuber WebAR QRã‚³ãƒ¼ãƒ‰ç”Ÿæˆãƒ„ãƒ¼ãƒ«</title>
+    <title>VTuber WebAR QRƒR[ƒh¶¬ƒc[ƒ‹</title>
     <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
     <style>
         body {
@@ -90,20 +90,20 @@
 </head>
 <body>
     <div class="container">
-        <h1>VTuber WebAR QRã‚³ãƒ¼ãƒ‰ç”Ÿæˆãƒ„ãƒ¼ãƒ«</h1>
+        <h1>VTuber WebAR QRƒR[ƒh¶¬ƒc[ƒ‹</h1>
         
         <div class="input-group">
-            <label for="url-input">WebARä½“é¨“ã®URLï¼š</label>
+            <label for="url-input">WebAR‘ÌŒ±‚ÌURLF</label>
             <input type="text" id="url-input" placeholder="https://your-vercel-app.vercel.app/" value="">
         </div>
         
-        <button id="generate-button">QRã‚³ãƒ¼ãƒ‰ã‚’ç”Ÿæˆ</button>
+        <button id="generate-button">QRƒR[ƒh‚ğ¶¬</button>
         
         <div id="qr-container" class="qr-container" style="display: none;">
-            <h2>ç”Ÿæˆã•ã‚ŒãŸQRã‚³ãƒ¼ãƒ‰</h2>
+            <h2>¶¬‚³‚ê‚½QRƒR[ƒh</h2>
             <div id="qr-code"></div>
-            <p>ã“ã®QRã‚³ãƒ¼ãƒ‰ã‚’ã‚¹ã‚­ãƒ£ãƒ³ã™ã‚‹ã¨ã€WebARä½“é¨“ãŒå§‹ã¾ã‚Šã¾ã™ã€‚</p>
-            <a id="download-link" class="download-link" download="vtuber-ar-qrcode.png">QRã‚³ãƒ¼ãƒ‰ã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰</a>
+            <p>‚±‚ÌQRƒR[ƒh‚ğƒXƒLƒƒƒ“‚·‚é‚ÆAWebAR‘ÌŒ±‚ªn‚Ü‚è‚Ü‚·B</p>
+            <a id="download-link" class="download-link" download="vtuber-ar-qrcode.png">QRƒR[ƒh‚ğƒ_ƒEƒ“ƒ[ƒh</a>
         </div>
     </div>
     
@@ -115,41 +115,41 @@
             const qrCodeDiv = document.getElementById('qr-code');
             const downloadLink = document.getElementById('download-link');
             
-            // ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§Vercelã‚¢ãƒ—ãƒªã®URLã‚’è¨­å®šï¼ˆå®Ÿéš›ã®ãƒ‡ãƒ—ãƒ­ã‚¤å¾Œã«å¤‰æ›´ï¼‰
+            // ƒfƒtƒHƒ‹ƒg‚ÅVercelƒAƒvƒŠ‚ÌURL‚ğİ’èiÀÛ‚ÌƒfƒvƒƒCŒã‚É•ÏXj
             urlInput.value = 'https://vtuber-ar-experience.vercel.app/';
             
             generateButton.addEventListener('click', function() {
                 const url = urlInput.value.trim();
                 
                 if (!url) {
-                    alert('URLã‚’å…¥åŠ›ã—ã¦ãã ã•ã„');
+                    alert('URL‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢');
                     return;
                 }
                 
-                // QRã‚³ãƒ¼ãƒ‰ã®ç”Ÿæˆ
+                // QRƒR[ƒh‚Ì¶¬
                 const qr = qrcode(0, 'M');
                 qr.addData(url);
                 qr.make();
                 
-                // QRã‚³ãƒ¼ãƒ‰ã®è¡¨ç¤º
+                // QRƒR[ƒh‚Ì•\¦
                 qrCodeDiv.innerHTML = qr.createImgTag(10, 0);
                 
-                // ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ãƒªãƒ³ã‚¯ã®è¨­å®š
+                // ƒ_ƒEƒ“ƒ[ƒhƒŠƒ“ƒN‚Ìİ’è
                 const imgTag = qrCodeDiv.querySelector('img');
                 const canvas = document.createElement('canvas');
                 canvas.width = imgTag.width;
                 canvas.height = imgTag.height;
                 const ctx = canvas.getContext('2d');
                 
-                // ç”»åƒãŒãƒ­ãƒ¼ãƒ‰ã•ã‚ŒãŸã‚‰ã‚­ãƒ£ãƒ³ãƒã‚¹ã«æç”»
+                // ‰æ‘œ‚ªƒ[ƒh‚³‚ê‚½‚çƒLƒƒƒ“ƒoƒX‚É•`‰æ
                 imgTag.onload = function() {
                     ctx.drawImage(imgTag, 0, 0);
                     
-                    // PNGãƒ‡ãƒ¼ã‚¿ã‚’ä½œæˆ
+                    // PNGƒf[ƒ^‚ğì¬
                     const dataUrl = canvas.toDataURL('image/png');
                     downloadLink.href = dataUrl;
                     
-                    // QRã‚³ãƒ¼ãƒ‰ã‚³ãƒ³ãƒ†ãƒŠã‚’è¡¨ç¤º
+                    // QRƒR[ƒhƒRƒ“ƒeƒi‚ğ•\¦
                     qrContainer.style.display = 'block';
                 };
             });

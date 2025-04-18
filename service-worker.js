@@ -1,4 +1,4 @@
-// VTuber WebAR - ƒT[ƒrƒXƒ[ƒJ[
+// VTuber WebAR - ã‚µãƒ¼ãƒ“ã‚¹ãƒ¯ãƒ¼ã‚«ãƒ¼
 
 const CACHE_NAME = 'vtuber-ar-v1';
 const ASSETS_TO_CACHE = [
@@ -16,7 +16,7 @@ const ASSETS_TO_CACHE = [
   'https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap'
 ];
 
-// ƒCƒ“ƒXƒg[ƒ‹Žž‚ÌƒLƒƒƒbƒVƒ…
+// ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ™‚ã®ã‚­ãƒ£ãƒƒã‚·ãƒ¥
 self.addEventListener('install', event => {
   console.log('[Service Worker] Install');
   
@@ -32,7 +32,7 @@ self.addEventListener('install', event => {
   );
 });
 
-// ŒÃ‚¢ƒLƒƒƒbƒVƒ…‚Ìíœ
+// å¤ã„ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã®å‰Šé™¤
 self.addEventListener('activate', event => {
   console.log('[Service Worker] Activate');
   
@@ -52,11 +52,11 @@ self.addEventListener('activate', event => {
   );
 });
 
-// ƒŠƒNƒGƒXƒg‚Ìƒnƒ“ƒhƒŠƒ“ƒOiƒLƒƒƒbƒVƒ…ƒtƒ@[ƒXƒg‚Ìí—ªj
+// ãƒªã‚¯ã‚¨ã‚¹ãƒˆã®ãƒãƒ³ãƒ‰ãƒªãƒ³ã‚°ï¼ˆã‚­ãƒ£ãƒƒã‚·ãƒ¥ãƒ•ã‚¡ãƒ¼ã‚¹ãƒˆã®æˆ¦ç•¥ï¼‰
 self.addEventListener('fetch', event => {
   console.log('[Service Worker] Fetch:', event.request.url);
   
-  // Googleƒhƒ‰ƒCƒu‚Ì“®‰æ‚ÍƒLƒƒƒbƒVƒ…‚µ‚È‚¢
+  // Googleãƒ‰ãƒ©ã‚¤ãƒ–ã®å‹•ç”»ã¯ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã—ãªã„
   if (event.request.url.includes('drive.google.com')) {
     return;
   }
@@ -64,15 +64,15 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
       .then(cachedResponse => {
-        // ƒLƒƒƒbƒVƒ…‚ª‚ ‚ê‚Î‚»‚ê‚ð•Ô‚·
+        // ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãŒã‚ã‚Œã°ãã‚Œã‚’è¿”ã™
         if (cachedResponse) {
           return cachedResponse;
         }
         
-        // ƒLƒƒƒbƒVƒ…‚ª‚È‚¯‚ê‚Îƒlƒbƒgƒ[ƒNƒŠƒNƒGƒXƒg
+        // ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãŒãªã‘ã‚Œã°ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ãƒªã‚¯ã‚¨ã‚¹ãƒˆ
         return fetch(event.request)
           .then(response => {
-            // ƒŒƒXƒ|ƒ“ƒX‚ðƒNƒ[ƒ“‚µ‚ÄƒLƒƒƒbƒVƒ…‚É•Û‘¶
+            // ãƒ¬ã‚¹ãƒãƒ³ã‚¹ã‚’ã‚¯ãƒ­ãƒ¼ãƒ³ã—ã¦ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã«ä¿å­˜
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }
@@ -88,7 +88,7 @@ self.addEventListener('fetch', event => {
           })
           .catch(error => {
             console.error('[Service Worker] Fetch failed:', error);
-            // ƒIƒtƒ‰ƒCƒ“ƒtƒH[ƒ‹ƒoƒbƒN‚ð’ñ‹Ÿ‚·‚éê‡‚Í‚±‚±‚É’Ç‰Á
+            // ã‚ªãƒ•ãƒ©ã‚¤ãƒ³ãƒ•ã‚©ãƒ¼ãƒ«ãƒãƒƒã‚¯ã‚’æä¾›ã™ã‚‹å ´åˆã¯ã“ã“ã«è¿½åŠ 
           });
       })
   );

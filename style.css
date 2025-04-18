@@ -1,12 +1,12 @@
-/* VTuber WebAR Style - ƒ|ƒbƒv‚Å‘N‚â‚©‚ÈƒfƒUƒCƒ“ */
+/* VTuber WebAR Style - ãƒãƒƒãƒ—ã§é®®ã‚„ã‹ãªãƒ‡ã‚¶ã‚¤ãƒ³ */
 
-/* Šî–{ƒXƒ^ƒCƒ‹ */
+/* åŸºæœ¬ã‚¹ã‚¿ã‚¤ãƒ« */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
 
 :root {
-  --primary-color: #FF69B4; /* ƒzƒbƒgƒsƒ“ƒN - ƒƒCƒ“ƒJƒ‰[ */
-  --secondary-color: #6A5ACD; /* ƒXƒŒ[ƒgƒuƒ‹[ - ƒAƒNƒZƒ“ƒgƒJƒ‰[ */
-  --accent-color: #7FFFD4; /* ƒAƒNƒAƒ}ƒŠƒ“ - ƒAƒNƒZƒ“ƒgƒJƒ‰[ */
+  --primary-color: #FF69B4; /* ãƒ›ãƒƒãƒˆãƒ”ãƒ³ã‚¯ - ãƒ¡ã‚¤ãƒ³ã‚«ãƒ©ãƒ¼ */
+  --secondary-color: #6A5ACD; /* ã‚¹ãƒ¬ãƒ¼ãƒˆãƒ–ãƒ«ãƒ¼ - ã‚¢ã‚¯ã‚»ãƒ³ãƒˆã‚«ãƒ©ãƒ¼ */
+  --accent-color: #7FFFD4; /* ã‚¢ã‚¯ã‚¢ãƒžãƒªãƒ³ - ã‚¢ã‚¯ã‚»ãƒ³ãƒˆã‚«ãƒ©ãƒ¼ */
   --text-color: #333333;
   --background-color: rgba(255, 255, 255, 0.85);
   --gradient-bg: linear-gradient(135deg, #FF69B4, #6A5ACD);
@@ -26,7 +26,7 @@ body {
   color: var(--text-color);
 }
 
-/* ƒ[ƒfƒBƒ“ƒO‰æ–Ê */
+/* ãƒ­ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ç”»é¢ */
 #loading-screen {
   position: fixed;
   top: 0;
@@ -59,7 +59,7 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* ŽwŽ¦‰æ–Ê */
+/* æŒ‡ç¤ºç”»é¢ */
 #instruction-screen {
   position: fixed;
   top: 0;
@@ -100,7 +100,7 @@ body {
   line-height: 1.5;
 }
 
-/* ƒ{ƒ^ƒ“ƒXƒ^ƒCƒ‹ */
+/* ãƒœã‚¿ãƒ³ã‚¹ã‚¿ã‚¤ãƒ« */
 button {
   background: var(--primary-color);
   color: white;
@@ -125,7 +125,7 @@ button:active {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ƒtƒH[ƒ‹ƒoƒbƒN‰æ–Ê */
+/* ãƒ•ã‚©ãƒ¼ãƒ«ãƒãƒƒã‚¯ç”»é¢ */
 #fallback-screen {
   position: fixed;
   top: 0;
@@ -161,7 +161,7 @@ button:active {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* ƒGƒ‰[‰æ–Ê */
+/* ã‚¨ãƒ©ãƒ¼ç”»é¢ */
 #error-screen {
   position: fixed;
   top: 0;
@@ -189,7 +189,7 @@ button:active {
   margin-bottom: 15px;
 }
 
-/* ƒ‰ƒCƒuî•ñ */
+/* ãƒ©ã‚¤ãƒ–æƒ…å ± */
 #live-info-overlay {
   position: fixed;
   top: 0;
@@ -250,7 +250,7 @@ button:active {
   font-size: 14px;
 }
 
-/* ƒ‚ƒoƒCƒ‹Œü‚¯’²® */
+/* ãƒ¢ãƒã‚¤ãƒ«å‘ã‘èª¿æ•´ */
 @media (max-width: 480px) {
   .instruction-container h1 {
     font-size: 20px;
@@ -270,7 +270,7 @@ button:active {
   }
 }
 
-/* AR.js‚É‚æ‚é‘S‰æ–Ê•\Ž¦‚Ì’²® */
+/* AR.jsã«ã‚ˆã‚‹å…¨ç”»é¢è¡¨ç¤ºã®èª¿æ•´ */
 .a-enter-vr {
   display: none;
 }
@@ -279,7 +279,7 @@ button:active {
   display: none;
 }
 
-/* AR.js‚ÌUI‚ð”ñ•\Ž¦ */
+/* AR.jsã®UIã‚’éžè¡¨ç¤º */
 .a-enter-ar-button {
   display: none;
 }

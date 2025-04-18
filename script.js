@@ -1,30 +1,30 @@
-// VTuber WebAR Experience - ƒƒCƒ“ƒXƒNƒŠƒvƒg
+// VTuber WebAR Experience - ãƒ¡ã‚¤ãƒ³ã‚¹ã‚¯ãƒªãƒ—ãƒˆ
 
-// ƒOƒ[ƒoƒ‹•Ï”
+// ã‚°ãƒ­ãƒ¼ãƒãƒ«å¤‰æ•°
 const config = {
-  // Googleƒhƒ‰ƒCƒu“®‰æƒŠƒ“ƒN (‰¡“®‰æ‚Æc“®‰æ‚Ì—¼•û‚ðƒTƒ|[ƒg)
-  horizontalVideoId: '1kA5sJEVSORl7NNWTZiMay1Fi6v3T8fPg', // ‰¡“®‰æ
-  verticalVideoId: '17-I-jcKJdzqZVLtglzIRJIravPwee-Jh', // c“®‰æ
-  // ‚Ç‚¿‚ç‚ðŽg—p‚·‚é‚© (true: c“®‰æAfalse: ‰¡“®‰æ)
-  useVerticalVideo: false, // ƒfƒtƒHƒ‹ƒg‚Í‰¡“®‰æ
-  // “®‰æ‚Ì•\Ž¦ƒTƒCƒY (ARƒ}[ƒJ[‚É‘Î‚·‚é‘Š‘ÎƒTƒCƒY)
-  videoWidth: 1.6,  // ‰¡“®‰æ‚Ì•
-  videoHeight: 0.9, // ‰¡“®‰æ‚Ì‚‚³
-  verticalVideoWidth: 0.9,  // c“®‰æ‚Ì•
-  verticalVideoHeight: 1.6, // c“®‰æ‚Ì‚‚³
-  // ƒ}[ƒJ[ŒŸo
-  detectionTimeout: 10000, // ƒ}[ƒJ[ŒŸo‚Ìƒ^ƒCƒ€ƒAƒEƒg (ƒ~ƒŠ•b)
-  // ƒ‰ƒCƒuî•ñ‚Ì•\Ž¦
-  liveInfoDelay: 30000, // “®‰æÄ¶ŠJŽn‚©‚ç‰½ƒ~ƒŠ•bŒã‚Éƒ‰ƒCƒuî•ñ‚ð•\Ž¦‚·‚é‚©
-  // ƒ‰ƒCƒuî•ñ
-  liveDate: '9ŒŽXX“ú',
-  liveVenue: '‰ïê–¢’è',
+  // Googleãƒ‰ãƒ©ã‚¤ãƒ–å‹•ç”»ãƒªãƒ³ã‚¯ (æ¨ªå‹•ç”»ã¨ç¸¦å‹•ç”»ã®ä¸¡æ–¹ã‚’ã‚µãƒãƒ¼ãƒˆ)
+  horizontalVideoId: '1kA5sJEVSORl7NNWTZiMay1Fi6v3T8fPg', // æ¨ªå‹•ç”»
+  verticalVideoId: '17-I-jcKJdzqZVLtglzIRJIravPwee-Jh', // ç¸¦å‹•ç”»
+  // ã©ã¡ã‚‰ã‚’ä½¿ç”¨ã™ã‚‹ã‹ (true: ç¸¦å‹•ç”»ã€false: æ¨ªå‹•ç”»)
+  useVerticalVideo: false, // ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯æ¨ªå‹•ç”»
+  // å‹•ç”»ã®è¡¨ç¤ºã‚µã‚¤ã‚º (ARãƒžãƒ¼ã‚«ãƒ¼ã«å¯¾ã™ã‚‹ç›¸å¯¾ã‚µã‚¤ã‚º)
+  videoWidth: 1.6,  // æ¨ªå‹•ç”»ã®å¹…
+  videoHeight: 0.9, // æ¨ªå‹•ç”»ã®é«˜ã•
+  verticalVideoWidth: 0.9,  // ç¸¦å‹•ç”»ã®å¹…
+  verticalVideoHeight: 1.6, // ç¸¦å‹•ç”»ã®é«˜ã•
+  // ãƒžãƒ¼ã‚«ãƒ¼æ¤œå‡º
+  detectionTimeout: 10000, // ãƒžãƒ¼ã‚«ãƒ¼æ¤œå‡ºã®ã‚¿ã‚¤ãƒ ã‚¢ã‚¦ãƒˆ (ãƒŸãƒªç§’)
+  // ãƒ©ã‚¤ãƒ–æƒ…å ±ã®è¡¨ç¤º
+  liveInfoDelay: 30000, // å‹•ç”»å†ç”Ÿé–‹å§‹ã‹ã‚‰ä½•ãƒŸãƒªç§’å¾Œã«ãƒ©ã‚¤ãƒ–æƒ…å ±ã‚’è¡¨ç¤ºã™ã‚‹ã‹
+  // ãƒ©ã‚¤ãƒ–æƒ…å ±
+  liveDate: '9æœˆXXæ—¥',
+  liveVenue: 'ä¼šå ´æœªå®š',
   liveLink: 'https://riotmusic.com',
-  // ƒGƒ‰[ƒŠƒgƒ‰ƒC‰ñ”
+  // ã‚¨ãƒ©ãƒ¼ãƒªãƒˆãƒ©ã‚¤å›žæ•°
   maxRetries: 3,
 };
 
-// ƒXƒe[ƒgŠÇ—
+// ã‚¹ãƒ†ãƒ¼ãƒˆç®¡ç†
 const state = {
   isARSupported: true,
   isMarkerDetected: false,
@@ -36,7 +36,7 @@ const state = {
   markerDetectionTimer: null,
 };
 
-// DOM—v‘f
+// DOMè¦ç´ 
 let loadingScreen;
 let instructionScreen;
 let fallbackScreen;
@@ -53,19 +53,19 @@ let fallbackLiveInfo;
 let errorMessage;
 let closeButtons;
 
-// ƒ†[ƒeƒBƒŠƒeƒBŠÖ”
+// ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£é–¢æ•°
 const getGoogleDriveDirectLink = (fileId) => {
   return `https://drive.google.com/uc?export=download&id=${fileId}`;
 };
 
 const logEvent = (eventName, data = {}) => {
   console.log(`[WebAR] ${eventName}`, data);
-  // ‚±‚±‚ÉƒAƒNƒZƒX‰ðÍƒCƒxƒ“ƒg‚Ì‘—MƒR[ƒh‚ð’Ç‰Á
+  // ã“ã“ã«ã‚¢ã‚¯ã‚»ã‚¹è§£æžã‚¤ãƒ™ãƒ³ãƒˆã®é€ä¿¡ã‚³ãƒ¼ãƒ‰ã‚’è¿½åŠ 
 };
 
-// ‰Šú‰»ŠÖ”
+// åˆæœŸåŒ–é–¢æ•°
 const init = () => {
-  // DOM—v‘f‚ÌŽæ“¾
+  // DOMè¦ç´ ã®å–å¾—
   loadingScreen = document.getElementById('loading-screen');
   instructionScreen = document.getElementById('instruction-screen');
   fallbackScreen = document.getElementById('fallback-screen');
@@ -81,19 +81,19 @@ const init = () => {
   fallbackLiveInfo = document.getElementById('fallback-live-info');
   errorMessage = document.getElementById('error-message');
 
-  // ƒNƒ[ƒYƒ{ƒ^ƒ“‚ÌŽæ“¾
+  // ã‚¯ãƒ­ãƒ¼ã‚ºãƒœã‚¿ãƒ³ã®å–å¾—
   closeButtons = document.querySelectorAll('.close-button');
   
-  // ARƒTƒ|[ƒgƒ`ƒFƒbƒN
+  // ARã‚µãƒãƒ¼ãƒˆãƒã‚§ãƒƒã‚¯
   checkARSupport();
   
-  // ƒCƒxƒ“ƒgƒŠƒXƒi[‚ÌÝ’è
+  // ã‚¤ãƒ™ãƒ³ãƒˆãƒªã‚¹ãƒŠãƒ¼ã®è¨­å®š
   setupEventListeners();
   
-  // “®‰æURL‚ÌÝ’è
+  // å‹•ç”»URLã®è¨­å®š
   setupVideoSources();
   
-  // ƒ[ƒfƒBƒ“ƒO‰æ–Ê‚ð”ñ•\Ž¦‚É‚µ‚ÄŽwŽ¦‰æ–Ê‚ð•\Ž¦
+  // ãƒ­ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ç”»é¢ã‚’éžè¡¨ç¤ºã«ã—ã¦æŒ‡ç¤ºç”»é¢ã‚’è¡¨ç¤º
   setTimeout(() => {
     loadingScreen.style.display = 'none';
     instructionScreen.style.display = 'flex';
@@ -102,16 +102,16 @@ const init = () => {
   logEvent('init_complete');
 };
 
-// ARƒTƒ|[ƒgƒ`ƒFƒbƒN
+// ARã‚µãƒãƒ¼ãƒˆãƒã‚§ãƒƒã‚¯
 const checkARSupport = () => {
-  // ƒJƒƒ‰‚ÌƒTƒ|[ƒgƒ`ƒFƒbƒN
+  // ã‚«ãƒ¡ãƒ©ã®ã‚µãƒãƒ¼ãƒˆãƒã‚§ãƒƒã‚¯
   if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
     state.isARSupported = false;
     logEvent('ar_not_supported', { reason: 'camera_api_missing' });
     return;
   }
   
-  // WebGL‚ÌƒTƒ|[ƒgƒ`ƒFƒbƒN
+  // WebGLã®ã‚µãƒãƒ¼ãƒˆãƒã‚§ãƒƒã‚¯
   const canvas = document.createElement('canvas');
   const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
   if (!gl) {
@@ -123,22 +123,22 @@ const checkARSupport = () => {
   logEvent('ar_supported');
 };
 
-// ƒCƒxƒ“ƒgƒŠƒXƒi[‚ÌÝ’è
+// ã‚¤ãƒ™ãƒ³ãƒˆãƒªã‚¹ãƒŠãƒ¼ã®è¨­å®š
 const setupEventListeners = () => {
-  // ƒXƒ^[ƒgƒ{ƒ^ƒ“
+  // ã‚¹ã‚¿ãƒ¼ãƒˆãƒœã‚¿ãƒ³
   startButton.addEventListener('click', startAR);
   
-  // ƒŠƒgƒ‰ƒCƒ{ƒ^ƒ“
+  // ãƒªãƒˆãƒ©ã‚¤ãƒœã‚¿ãƒ³
   retryButton.addEventListener('click', () => {
     errorScreen.style.display = 'none';
     startAR();
   });
   
-  // ƒ}[ƒJ[ŒŸoƒCƒxƒ“ƒg
+  // ãƒžãƒ¼ã‚«ãƒ¼æ¤œå‡ºã‚¤ãƒ™ãƒ³ãƒˆ
   markerElement.addEventListener('markerFound', onMarkerFound);
   markerElement.addEventListener('markerLost', onMarkerLost);
   
-  // ƒNƒ[ƒYƒ{ƒ^ƒ“
+  // ã‚¯ãƒ­ãƒ¼ã‚ºãƒœã‚¿ãƒ³
   closeButtons.forEach(button => {
     button.addEventListener('click', (e) => {
       const parent = e.target.closest('.live-info');
@@ -148,12 +148,12 @@ const setupEventListeners = () => {
     });
   });
   
-  // ƒtƒH[ƒ‹ƒoƒbƒN“®‰æ‚ÌƒCƒxƒ“ƒg
+  // ãƒ•ã‚©ãƒ¼ãƒ«ãƒãƒƒã‚¯å‹•ç”»ã®ã‚¤ãƒ™ãƒ³ãƒˆ
   fallbackVideo.addEventListener('ended', () => {
     fallbackVideo.currentTime = 0;
     fallbackVideo.play();
     
-    // ƒ‹[ƒvÄ¶‚¨‚æ‚Ñˆê’èŽžŠÔŒã‚Éƒ‰ƒCƒuî•ñ•\Ž¦
+    // ãƒ«ãƒ¼ãƒ—å†ç”ŸãŠã‚ˆã³ä¸€å®šæ™‚é–“å¾Œã«ãƒ©ã‚¤ãƒ–æƒ…å ±è¡¨ç¤º
     if (!state.liveInfoShown) {
       setTimeout(() => {
         fallbackLiveInfo.style.display = 'block';
@@ -163,109 +163,109 @@ const setupEventListeners = () => {
     }
   });
   
-  // ƒEƒBƒ“ƒhƒEƒTƒCƒY•ÏXŽž‚Ìˆ—
+  // ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚µã‚¤ã‚ºå¤‰æ›´æ™‚ã®å‡¦ç†
   window.addEventListener('resize', onWindowResize);
 };
 
-// “®‰æURL‚ÌÝ’è
+// å‹•ç”»URLã®è¨­å®š
 const setupVideoSources = () => {
-  // ‰¡“®‰æ‚ÌURL‚ðÝ’è
+  // æ¨ªå‹•ç”»ã®URLã‚’è¨­å®š
   const horizontalVideoUrl = getGoogleDriveDirectLink(config.horizontalVideoId);
   videoElement.setAttribute('src', horizontalVideoUrl);
   
-  // c“®‰æ‚ÌURL‚ðÝ’è
+  // ç¸¦å‹•ç”»ã®URLã‚’è¨­å®š
   const verticalVideoUrl = getGoogleDriveDirectLink(config.verticalVideoId);
   verticalVideoElement.setAttribute('src', verticalVideoUrl);
   
-  // ƒtƒH[ƒ‹ƒoƒbƒN“®‰æ‚ÌURL‚ðÝ’è
+  // ãƒ•ã‚©ãƒ¼ãƒ«ãƒãƒƒã‚¯å‹•ç”»ã®URLã‚’è¨­å®š
   fallbackVideo.src = config.useVerticalVideo ? verticalVideoUrl : horizontalVideoUrl;
   
   logEvent('video_sources_set');
 };
 
-// ARŠJŽn
+// ARé–‹å§‹
 const startAR = () => {
   logEvent('ar_start_attempt');
   
-  // ŽwŽ¦‰æ–Ê‚ð”ñ•\Ž¦
+  // æŒ‡ç¤ºç”»é¢ã‚’éžè¡¨ç¤º
   instructionScreen.style.display = 'none';
   
-  // AR‚ªƒTƒ|[ƒg‚³‚ê‚Ä‚¢‚È‚¢ê‡‚ÍƒtƒH[ƒ‹ƒoƒbƒN
+  // ARãŒã‚µãƒãƒ¼ãƒˆã•ã‚Œã¦ã„ãªã„å ´åˆã¯ãƒ•ã‚©ãƒ¼ãƒ«ãƒãƒƒã‚¯
   if (!state.isARSupported) {
     showFallback();
     return;
   }
   
-  // AR‚ª—˜—p‰Â”\‚Èê‡
+  // ARãŒåˆ©ç”¨å¯èƒ½ãªå ´åˆ
   try {
-    // ARƒV[ƒ“‚ð•\Ž¦
+    // ARã‚·ãƒ¼ãƒ³ã‚’è¡¨ç¤º
     arScene.style.display = 'block';
     
-    // ƒJƒƒ‰ƒAƒNƒZƒX‹–‰Â‚ð—v‹
+    // ã‚«ãƒ¡ãƒ©ã‚¢ã‚¯ã‚»ã‚¹è¨±å¯ã‚’è¦æ±‚
     navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
       .then(stream => {
         logEvent('camera_access_granted');
         
-        // ƒ}[ƒJ[ŒŸoƒ^ƒCƒ€ƒAƒEƒg‚ÌÝ’è
+        // ãƒžãƒ¼ã‚«ãƒ¼æ¤œå‡ºã‚¿ã‚¤ãƒ ã‚¢ã‚¦ãƒˆã®è¨­å®š
         state.markerDetectionTimer = setTimeout(() => {
           if (!state.isMarkerDetected) {
-            showError('ƒ}[ƒJ[‚ªŒŸo‚Å‚«‚Ü‚¹‚ñBƒ}[ƒJ[‚ªŒ©‚¦‚é‚æ‚¤‚ÉƒJƒƒ‰‚ð’²®‚µ‚Ä‚­‚¾‚³‚¢B');
+            showError('ãƒžãƒ¼ã‚«ãƒ¼ãŒæ¤œå‡ºã§ãã¾ã›ã‚“ã€‚ãƒžãƒ¼ã‚«ãƒ¼ãŒè¦‹ãˆã‚‹ã‚ˆã†ã«ã‚«ãƒ¡ãƒ©ã‚’èª¿æ•´ã—ã¦ãã ã•ã„ã€‚');
           }
         }, config.detectionTimeout);
       })
       .catch(err => {
         logEvent('camera_access_denied', { error: err.message });
-        showError('ƒJƒƒ‰‚Ö‚ÌƒAƒNƒZƒX‚ª‹‘”Û‚³‚ê‚Ü‚µ‚½BÝ’è‚©‚çƒJƒƒ‰‚Ö‚ÌƒAƒNƒZƒX‚ð‹–‰Â‚µ‚Ä‚­‚¾‚³‚¢B');
+        showError('ã‚«ãƒ¡ãƒ©ã¸ã®ã‚¢ã‚¯ã‚»ã‚¹ãŒæ‹’å¦ã•ã‚Œã¾ã—ãŸã€‚è¨­å®šã‹ã‚‰ã‚«ãƒ¡ãƒ©ã¸ã®ã‚¢ã‚¯ã‚»ã‚¹ã‚’è¨±å¯ã—ã¦ãã ã•ã„ã€‚');
       });
   } catch (error) {
     logEvent('ar_start_error', { error: error.message });
-    showError('AR‚ÌŠJŽn’†‚ÉƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½B‚à‚¤ˆê“x‚¨ŽŽ‚µ‚­‚¾‚³‚¢B');
+    showError('ARã®é–‹å§‹ä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚ã‚‚ã†ä¸€åº¦ãŠè©¦ã—ãã ã•ã„ã€‚');
   }
 };
 
-// ƒ}[ƒJ[ŒŸoŽž
+// ãƒžãƒ¼ã‚«ãƒ¼æ¤œå‡ºæ™‚
 const onMarkerFound = () => {
   logEvent('marker_found');
   state.isMarkerDetected = true;
   
-  // ƒ}[ƒJ[ŒŸoƒ^ƒCƒ€ƒAƒEƒg‚ðƒNƒŠƒA
+  // ãƒžãƒ¼ã‚«ãƒ¼æ¤œå‡ºã‚¿ã‚¤ãƒ ã‚¢ã‚¦ãƒˆã‚’ã‚¯ãƒªã‚¢
   if (state.markerDetectionTimer) {
     clearTimeout(state.markerDetectionTimer);
   }
   
-  // Žg—p‚·‚é“®‰æ—v‘f‚ð‘I‘ð
+  // ä½¿ç”¨ã™ã‚‹å‹•ç”»è¦ç´ ã‚’é¸æŠž
   const activeVideoElement = config.useVerticalVideo ? verticalVideoElement : videoElement;
   
-  // “®‰æ—v‘f‚ð•\Ž¦
+  // å‹•ç”»è¦ç´ ã‚’è¡¨ç¤º
   activeVideoElement.setAttribute('visible', 'true');
   
-  // “®‰æ‚ª–¢ƒ[ƒh‚Ìê‡‚Íƒ[ƒh
+  // å‹•ç”»ãŒæœªãƒ­ãƒ¼ãƒ‰ã®å ´åˆã¯ãƒ­ãƒ¼ãƒ‰
   if (!state.isVideoLoaded) {
     loadVideo(activeVideoElement);
   }
-  // Šù‚Éƒ[ƒhÏ‚Ý‚Ìê‡‚ÍÄ¶
+  // æ—¢ã«ãƒ­ãƒ¼ãƒ‰æ¸ˆã¿ã®å ´åˆã¯å†ç”Ÿ
   else if (!state.isVideoPlaying) {
     playVideo(activeVideoElement);
   }
 };
 
-// ƒ}[ƒJ[ƒƒXƒgŽž
+// ãƒžãƒ¼ã‚«ãƒ¼ãƒ­ã‚¹ãƒˆæ™‚
 const onMarkerLost = () => {
   logEvent('marker_lost');
   state.isMarkerDetected = false;
   
-  // Žg—p‚·‚é“®‰æ—v‘f‚ð‘I‘ð
+  // ä½¿ç”¨ã™ã‚‹å‹•ç”»è¦ç´ ã‚’é¸æŠž
   const activeVideoElement = config.useVerticalVideo ? verticalVideoElement : videoElement;
   
-  // ˆêŽž’âŽ~‚Í‚µ‚È‚¢iƒ}[ƒJ[‚ªÄŒŸo‚³‚ê‚½‚Æ‚«‚ÉƒV[ƒ€ƒŒƒX‚ÉÄŠJ‚Å‚«‚é‚æ‚¤‚Éj
-  // ‘ã‚í‚è‚ÉA’·ŽžŠÔƒ}[ƒJ[‚ªƒƒXƒg‚µ‚½ê‡‚Ìƒnƒ“ƒhƒŠƒ“ƒO‚ª•K—v‚È‚ç‚±‚±‚É’Ç‰Á
+  // ä¸€æ™‚åœæ­¢ã¯ã—ãªã„ï¼ˆãƒžãƒ¼ã‚«ãƒ¼ãŒå†æ¤œå‡ºã•ã‚ŒãŸã¨ãã«ã‚·ãƒ¼ãƒ ãƒ¬ã‚¹ã«å†é–‹ã§ãã‚‹ã‚ˆã†ã«ï¼‰
+  // ä»£ã‚ã‚Šã«ã€é•·æ™‚é–“ãƒžãƒ¼ã‚«ãƒ¼ãŒãƒ­ã‚¹ãƒˆã—ãŸå ´åˆã®ãƒãƒ³ãƒ‰ãƒªãƒ³ã‚°ãŒå¿…è¦ãªã‚‰ã“ã“ã«è¿½åŠ 
 };
 
-// “®‰æ‚Ìƒ[ƒh‚ÆÄ¶
+// å‹•ç”»ã®ãƒ­ãƒ¼ãƒ‰ã¨å†ç”Ÿ
 const loadVideo = (videoElement) => {
   logEvent('video_load_attempt');
   
-  // “®‰æ‚Ìƒ[ƒhƒGƒ‰[ƒnƒ“ƒhƒŠƒ“ƒO
+  // å‹•ç”»ã®ãƒ­ãƒ¼ãƒ‰ã‚¨ãƒ©ãƒ¼ãƒãƒ³ãƒ‰ãƒªãƒ³ã‚°
   const onVideoError = () => {
     logEvent('video_load_error', { retryCount: state.retryCount });
     
@@ -273,23 +273,23 @@ const loadVideo = (videoElement) => {
       state.retryCount++;
       setTimeout(() => loadVideo(videoElement), 1000);
     } else {
-      showError('“®‰æ‚Ì“Ç‚Ýž‚Ý‚ÉŽ¸”s‚µ‚Ü‚µ‚½Bƒlƒbƒgƒ[ƒNÚ‘±‚ðŠm”F‚µ‚Ä‚­‚¾‚³‚¢B');
+      showError('å‹•ç”»ã®èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯æŽ¥ç¶šã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚');
     }
   };
   
-  // “®‰æ‚Ìƒ[ƒh¬Œ÷Žž
+  // å‹•ç”»ã®ãƒ­ãƒ¼ãƒ‰æˆåŠŸæ™‚
   const onVideoLoaded = () => {
     logEvent('video_loaded');
     state.isVideoLoaded = true;
     playVideo(videoElement);
   };
   
-  // ƒCƒxƒ“ƒgƒŠƒXƒi[‚Ì’Ç‰Á
+  // ã‚¤ãƒ™ãƒ³ãƒˆãƒªã‚¹ãƒŠãƒ¼ã®è¿½åŠ 
   const videoAsset = videoElement.components.material.material.map.image;
   videoAsset.addEventListener('error', onVideoError);
   videoAsset.addEventListener('loadeddata', onVideoLoaded);
   
-  // “®‰æ‚Ìƒ[ƒh
+  // å‹•ç”»ã®ãƒ­ãƒ¼ãƒ‰
   try {
     videoAsset.load();
   } catch (error) {
@@ -297,22 +297,22 @@ const loadVideo = (videoElement) => {
   }
 };
 
-// “®‰æ‚ÌÄ¶
+// å‹•ç”»ã®å†ç”Ÿ
 const playVideo = (videoElement) => {
   logEvent('video_play_attempt');
   
   const videoAsset = videoElement.components.material.material.map.image;
   
-  // “®‰æ‚ÌÄ¶
+  // å‹•ç”»ã®å†ç”Ÿ
   videoAsset.play()
     .then(() => {
       logEvent('video_playing');
       state.isVideoPlaying = true;
       
-      // ƒ‹[ƒvÄ¶‚ÌÝ’è
+      // ãƒ«ãƒ¼ãƒ—å†ç”Ÿã®è¨­å®š
       videoAsset.loop = true;
       
-      // ˆê’èŽžŠÔŒã‚Éƒ‰ƒCƒuî•ñ‚ð•\Ž¦
+      // ä¸€å®šæ™‚é–“å¾Œã«ãƒ©ã‚¤ãƒ–æƒ…å ±ã‚’è¡¨ç¤º
       if (!state.liveInfoShown) {
         state.liveInfoTimer = setTimeout(() => {
           showLiveInfo();
@@ -322,59 +322,59 @@ const playVideo = (videoElement) => {
     .catch(error => {
       logEvent('video_play_error', { error: error.message });
       
-      // Ž©“®Ä¶ƒ|ƒŠƒV[‚Éˆø‚Á‚©‚©‚Á‚½‰Â”\«‚ª‚ ‚é
-      showError('“®‰æ‚ÌÄ¶‚ÉŽ¸”s‚µ‚Ü‚µ‚½B‰æ–Ê‚ðƒ^ƒbƒv‚µ‚ÄÄ¶‚ðŽŽ‚Ý‚Ä‚­‚¾‚³‚¢B');
+      // è‡ªå‹•å†ç”Ÿãƒãƒªã‚·ãƒ¼ã«å¼•ã£ã‹ã‹ã£ãŸå¯èƒ½æ€§ãŒã‚ã‚‹
+      showError('å‹•ç”»ã®å†ç”Ÿã«å¤±æ•—ã—ã¾ã—ãŸã€‚ç”»é¢ã‚’ã‚¿ãƒƒãƒ—ã—ã¦å†ç”Ÿã‚’è©¦ã¿ã¦ãã ã•ã„ã€‚');
     });
 };
 
-// ƒ‰ƒCƒuî•ñ‚Ì•\Ž¦
+// ãƒ©ã‚¤ãƒ–æƒ…å ±ã®è¡¨ç¤º
 const showLiveInfo = () => {
   logEvent('live_info_shown');
   state.liveInfoShown = true;
   
-  // ƒ‰ƒCƒuî•ñƒI[ƒo[ƒŒƒC‚ð•\Ž¦
+  // ãƒ©ã‚¤ãƒ–æƒ…å ±ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤ã‚’è¡¨ç¤º
   liveInfoOverlay.style.display = 'flex';
   
-  // ƒ‰ƒCƒuî•ñ‚ÌƒeƒLƒXƒg‚ðXV
+  // ãƒ©ã‚¤ãƒ–æƒ…å ±ã®ãƒ†ã‚­ã‚¹ãƒˆã‚’æ›´æ–°
   const liveInfoElements = document.querySelectorAll('.live-info h3');
   liveInfoElements.forEach(element => {
-    element.textContent = `ƒ‰ƒCƒuŠJÃI${config.liveDate}@${config.liveVenue}`;
+    element.textContent = `ãƒ©ã‚¤ãƒ–é–‹å‚¬ï¼${config.liveDate}@${config.liveVenue}`;
   });
   
-  // ƒ‰ƒCƒuî•ñ‚ÌƒŠƒ“ƒN‚ðXV
+  // ãƒ©ã‚¤ãƒ–æƒ…å ±ã®ãƒªãƒ³ã‚¯ã‚’æ›´æ–°
   const liveLinkElements = document.querySelectorAll('.live-link');
   liveLinkElements.forEach(element => {
     element.href = config.liveLink;
   });
 };
 
-// ƒGƒ‰[‰æ–Ê‚Ì•\Ž¦
+// ã‚¨ãƒ©ãƒ¼ç”»é¢ã®è¡¨ç¤º
 const showError = (message) => {
   logEvent('error_shown', { message });
   
-  // ARƒV[ƒ“‚ð”ñ•\Ž¦
+  // ARã‚·ãƒ¼ãƒ³ã‚’éžè¡¨ç¤º
   arScene.style.display = 'none';
   
-  // ƒGƒ‰[ƒƒbƒZ[ƒW‚ðÝ’è
+  // ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¨­å®š
   errorMessage.textContent = message;
   
-  // ƒGƒ‰[‰æ–Ê‚ð•\Ž¦
+  // ã‚¨ãƒ©ãƒ¼ç”»é¢ã‚’è¡¨ç¤º
   errorScreen.style.display = 'flex';
 };
 
-// ƒtƒH[ƒ‹ƒoƒbƒN‰æ–Ê‚Ì•\Ž¦iAR”ñ‘Î‰žŽžj
+// ãƒ•ã‚©ãƒ¼ãƒ«ãƒãƒƒã‚¯ç”»é¢ã®è¡¨ç¤ºï¼ˆARéžå¯¾å¿œæ™‚ï¼‰
 const showFallback = () => {
   logEvent('fallback_shown');
   
-  // ƒtƒH[ƒ‹ƒoƒbƒN‰æ–Ê‚ð•\Ž¦
+  // ãƒ•ã‚©ãƒ¼ãƒ«ãƒãƒƒã‚¯ç”»é¢ã‚’è¡¨ç¤º
   fallbackScreen.style.display = 'flex';
   
-  // “®‰æ‚ÌÄ¶
+  // å‹•ç”»ã®å†ç”Ÿ
   fallbackVideo.play()
     .then(() => {
       logEvent('fallback_video_playing');
       
-      // ˆê’èŽžŠÔŒã‚Éƒ‰ƒCƒuî•ñ•\Ž¦
+      // ä¸€å®šæ™‚é–“å¾Œã«ãƒ©ã‚¤ãƒ–æƒ…å ±è¡¨ç¤º
       setTimeout(() => {
         fallbackLiveInfo.style.display = 'block';
         state.liveInfoShown = true;
@@ -383,19 +383,19 @@ const showFallback = () => {
     })
     .catch(error => {
       logEvent('fallback_video_play_error', { error: error.message });
-      showError('“®‰æ‚ÌÄ¶‚ÉŽ¸”s‚µ‚Ü‚µ‚½B‰æ–Ê‚ðƒ^ƒbƒv‚µ‚ÄÄ¶‚ðŽŽ‚Ý‚Ä‚­‚¾‚³‚¢B');
+      showError('å‹•ç”»ã®å†ç”Ÿã«å¤±æ•—ã—ã¾ã—ãŸã€‚ç”»é¢ã‚’ã‚¿ãƒƒãƒ—ã—ã¦å†ç”Ÿã‚’è©¦ã¿ã¦ãã ã•ã„ã€‚');
     });
 };
 
-// ƒEƒBƒ“ƒhƒEƒTƒCƒY•ÏXŽž‚Ìˆ—
+// ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚µã‚¤ã‚ºå¤‰æ›´æ™‚ã®å‡¦ç†
 const onWindowResize = () => {
-  // •K—v‚É‰ž‚¶‚ÄUI—v‘f‚ÌƒTƒCƒY’²®‚È‚Ç
+  // å¿…è¦ã«å¿œã˜ã¦UIè¦ç´ ã®ã‚µã‚¤ã‚ºèª¿æ•´ãªã©
 };
 
-// ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‰Šú‰»
+// ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³åˆæœŸåŒ–
 document.addEventListener('DOMContentLoaded', init);
 
-// ƒT[ƒrƒXƒ[ƒJ[“o˜^iPWAƒTƒ|[ƒgj
+// ã‚µãƒ¼ãƒ“ã‚¹ãƒ¯ãƒ¼ã‚«ãƒ¼ç™»éŒ²ï¼ˆPWAã‚µãƒãƒ¼ãƒˆï¼‰
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js')
