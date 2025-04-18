@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTuber WebAR QRコード生成ツール</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #FF69B4, #6A5ACD);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+        
+        h1 {
+            color: #FF69B4;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        button {
+            background: #FF69B4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 20px auto;
+        }
+        
+        button:hover {
+            background: #6A5ACD;
+            transform: translateY(-2px);
+        }
+        
+        .qr-container {
+            text-align: center;
+            margin-top: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .download-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #6A5ACD;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .download-link:hover {
+            color: #FF69B4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>VTuber WebAR QRコード生成ツール</h1>
+        
+        <div class="input-group">
+            <label for="url-input">WebAR体験のURL：</label>
+            <input type="text" id="url-input" placeholder="https://your-vercel-app.vercel.app/" value="">
+        </div>
+        
+        <button id="generate-button">QRコードを生成</button>
+        
+        <div id="qr-container" class="qr-container" style="display: none;">
+            <h2>生成されたQRコード</h2>
+            <div id="qr-code"></div>
+            <p>このQRコードをスキャンすると、WebAR体験が始まります。</p>
+            <a id="download-link" class="download-link" download="vtuber-ar-qrcode.png">QRコードをダウンロード</a>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlInput = document.getElementById('url-input');
+            const generateButton = document.getElementById('generate-button');
+            const qrContainer = document.getElementById('qr-container');
+            const qrCodeDiv = document.getElementById('qr-code');
+            const downloadLink = document.getElementById('download-link');
+            
+            // デフォルトでVercelアプリのURLを設定（実際のデプロイ後に変更）
+            urlInput.value = 'https://vtuber-ar-experience.vercel.app/';
+            
+            generateButton.addEventListener('click', function() {
+                const url = urlInput.value.trim();
+                
+                if (!url) {
+                    alert('URLを入力してください');
+                    return;
+                }
+                
+                // QRコードの生成
+                const qr = qrcode(0, 'M');
+                qr.addData(url);
+                qr.make();
+                
+                // QRコードの表示
+                qrCodeDiv.innerHTML = qr.createImgTag(10, 0);
+                
+                // ダウンロードリンクの設定
+                const imgTag = qrCodeDiv.querySelector('img');
+                const canvas = document.createElement('canvas');
+                canvas.width = imgTag.width;
+                canvas.height = imgTag.height;
+                const ctx = canvas.getContext('2d');
+                
+                // 画像がロードされたらキャンバスに描画
+                imgTag.onload = function() {
+                    ctx.drawImage(imgTag, 0, 0);
+                    
+                    // PNGデータを作成
+                    const dataUrl = canvas.toDataURL('image/png');
+                    downloadLink.href = dataUrl;
+                    
+                    // QRコードコンテナを表示
+                    qrContainer.style.display = 'block';
+                };
+            });
+        });
+    </script>
+</body>
+</html>

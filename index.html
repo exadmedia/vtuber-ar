@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>VTuber WebAR Experience</title>
+    
+    <!-- A-Frame と AR.js の読み込み -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    
+    <!-- カスタムCSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- OGP設定 -->
+    <meta property="og:title" content="VTuber WebAR Experience">
+    <meta property="og:description" content="QRコードをスキャンして、ARでVTuber MVを楽しもう！">
+    <meta property="og:image" content="assets/images/ogp.png">
+    
+    <!-- PWA設定 -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#FF69B4">
+    
+    <!-- アクセス解析 -->
+    <script defer data-domain="your-vercel-domain.vercel.app" src="https://plausible.io/js/plausible.js"></script>
+</head>
+<body>
+    <!-- ローディング画面 -->
+    <div id="loading-screen">
+        <div class="loading-container">
+            <div class="loading-spinner"></div>
+            <p>Loading AR Experience...</p>
+        </div>
+    </div>
+
+    <!-- 初期指示画面 -->
+    <div id="instruction-screen">
+        <div class="instruction-container">
+            <h1>VTuber AR Experience</h1>
+            <p>マーカーにカメラを向けてARを体験しよう！</p>
+            <button id="start-button">スタート</button>
+        </div>
+    </div>
+
+    <!-- AR不可時のフォールバック画面 -->
+    <div id="fallback-screen" style="display: none;">
+        <div class="fallback-container">
+            <h2>ARが使用できません</h2>
+            <p>代わりに動画を再生します</p>
+            <video id="fallback-video" controls>
+                <source src="" type="video/mp4">
+            </video>
+            <div id="fallback-live-info" class="live-info" style="display: none;">
+                <h3>ライブ開催！9月XX日@会場未定</h3>
+                <a href="https://riotmusic.com" target="_blank" class="live-link">詳細はこちら</a>
+                <button class="close-button">閉じる</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- エラー画面 -->
+    <div id="error-screen" style="display: none;">
+        <div class="error-container">
+            <h2>エラーが発生しました</h2>
+            <p id="error-message">動画の読み込みに失敗しました。</p>
+            <button id="retry-button">再試行</button>
+        </div>
+    </div>
+
+    <!-- ライブ情報オーバーレイ -->
+    <div id="live-info-overlay" style="display: none;">
+        <div class="live-info">
+            <h3>ライブ開催！9月XX日@会場未定</h3>
+            <a href="https://riotmusic.com" target="_blank" class="live-link">詳細はこちら</a>
+            <button class="close-button">閉じる</button>
+        </div>
+    </div>
+
+    <!-- AR Scene -->
+    <a-scene
+        id="ar-scene"
+        embedded
+        arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; trackingMethod: best;"
+        vr-mode-ui="enabled: false"
+        renderer="logarithmicDepthBuffer: true; antialias: true; precision: medium;"
+        style="display: none;">
+
+        <!-- カメラ -->
+        <a-entity camera></a-entity>
+
+        <!-- マーカー -->
+        <a-marker
+            preset="hiro"
+            id="hiro-marker"
+            smooth="true"
+            smoothCount="10"
+            smoothTolerance="0.01"
+            smoothThreshold="5"
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;">
+            
+            <!-- 動画プレーン -->
+            <a-video
+                id="mv-video"
+                src=""
+                width="1.6"
+                height="0.9"
+                position="0 0.5 0"
+                rotation="-90 0 0"
+                class="clickable"
+                visible="false">
+            </a-video>
+            
+            <!-- 縦動画用プレーン（初期状態は非表示） -->
+            <a-video
+                id="mv-video-vertical"
+                src=""
+                width="0.9"
+                height="1.6"
+                position="0 0.5 0"
+                rotation="-90 0 0"
+                class="clickable"
+                visible="false">
+            </a-video>
+        </a-marker>
+    </a-scene>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
